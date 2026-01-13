@@ -1,0 +1,48 @@
+{
+    "name" : "seffeng/laravel-snowflake",
+    "description" : "PHP laravel extension snowflake",
+    "keywords" : [
+        "PHP",
+        "laravel",
+        "yii2",
+        "seffeng",
+        "snowflake"
+    ],
+    "license" : "MIT",
+    "homepage" : "https://github.com/seffeng/laravel-snowflake",
+    "authors" : [{
+            "name" : "seffeng",
+            "email" : "save.zxf@gmail.com",
+            "homepage" : "https://github.com/seffeng"
+        }
+    ],
+    "require" : {
+        "php" : ">=7.1.3",
+        "illuminate/support" : ">=5.5",
+        "illuminate/contracts" : ">=5.5",
+        "godruoyi/php-snowflake" : ">=2.1.1",
+        "seffeng/arr-helper": ">=0.1.0"
+    },
+    "require-dev" : {
+        "laravel/framework" : ">=5.5",
+        "phpunit/phpunit" : ">=8.0"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "Seffeng\\LaravelSnowflake\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "Seffeng\\LaravelSnowflake\\Tests\\" : "tests/"
+        }
+    },
+    "extra" : {
+        "laravel" : {
+            "providers" : [
+                "Seffeng\\LaravelSnowflake\\SnowflakeServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability" : "stable"
+}
