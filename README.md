@@ -40,10 +40,24 @@ class SiteController extends Controller
 {
     public function test()
     {
+        // 生成雪花ID
         var_dump(Snowflake::id());
     }
 }
 ```
+
+```php
+# Model 示例
+use Illuminate\Database\Eloquent\Model;
+use Seffeng\LaravelSnowflake\Traits\SnowflakePrimary;
+
+class User extends Model {
+    // $model->save() 时自动使用雪花ID
+    use SnowflakePrimary;
+}
+```
+
+
 
 ### 备注
 
